@@ -33,12 +33,27 @@
         width: 100%;
         .parallax-container {
           position: relative;
-          transition: all 1s ease;
+          transition: opacity 3s, top 1s ease;
+          z-index: 2;
           img {
             padding: 0;
             width: 100%;
           }
         }
+      }
+    }
+    .charts_container {
+      align-items: center;
+      display: flex;
+      gap: 20px;   
+      justify-content: center;
+      .chart_container {
+        margin: 20px auto 40px auto;
+        .parallax-container {
+          position: relative;
+          transition: opacity 3s, top 1s ease;
+          z-index: 2;
+        } 
       }
     }
     .text_container {
@@ -160,6 +175,129 @@
           font-size: 24px;
           font-weight: 600;
           line-height: 30px;
+        }
+      }
+    }
+  }
+  >.chapters_container .fixed-section {
+    position: relative;
+    z-index: 2;
+    .fixed-background {
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      height: 100vh;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+        content: '';
+        height: 100vh;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: background-color 0.5s ease-in-out;
+        width: 100%;
+        z-index: 20;
+      }
+      .scroll-indicator {
+        background-color: transparent;
+        color: #fff;
+        left: 50%;
+        position: relative;
+        text-align: center;
+        top: calc(100vh - 25px);
+        width: 0;
+        z-index: 10;
+        .arrow {
+          animation: bounce 1.5s infinite;
+          border-bottom: 7px solid #666;
+          border-right: 7px solid #666;
+          bottom: 0;
+          height: 20px;
+          margin: 10px auto 0 -17px;
+          position: absolute;
+          transform: rotate(45deg);
+          width: 20px;
+        }
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateY(0) rotate(45deg);
+          }
+          50% {
+            transform: translateY(10px) rotate(45deg);
+          }
+        }
+      }
+      &.absolute_bottom {
+        bottom: 0;
+        position: absolute;
+      }
+      &.absolute_top {
+        position: absolute;
+        top: 0;
+      }
+      &.fixed {
+        position: fixed;
+        top: 0;
+      }
+      .chart_container_full {
+        align-content:center;
+        align-items:center;
+        background-color: #222;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        max-width: 100%;
+        min-height: 100vh;
+        width: 100%;
+        div {
+          width: 100%;
+          @import './components/fdi_explorer.less';
+        }
+      }
+    }
+    .scroll-elements {
+      position: relative;
+      top: 80vh;
+      .scroll-content {
+        align-content: center;
+        align-items: center;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        height: 130vh;
+        justify-content: flex-start;
+        position: relative;
+        z-index: 2;
+        >div {
+          box-sizing: border-box;
+          padding: 20px 20px;
+          position: relative;
+          text-align: center;
+          text-shadow: 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 20px #000, 0px 0px 20px #000;
+          @media all and (max-width: 576px) {
+            text-shadow: 0px 0px 15px #000, 0px 0px 15px #000, 0px 0px 15px #000, 0px 0px 15px #000, 0px 0px 15px #000, 0px 0px 15px #000, 0px 0px 15px #000, 0px 0px 15px #000, 0px 0px 15px #000, 0px 0px 15px #000;
+          }
+          p {
+            color: #fff;
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: 0;
+            line-height: 62px;
+            margin: auto auto 20px auto !important;
+            max-width: 700px;
+            @media all and (max-width: 576px) {
+              font-size: 34px;
+              line-height: 48px;
+              max-width: 100%;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
         }
       }
     }

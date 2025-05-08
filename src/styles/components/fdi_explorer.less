@@ -1,0 +1,217 @@
+.layout {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  color: #fff;
+  .left_container,
+  .right_container {
+    h3 {
+      display: inline-block;
+      margin: 0 0 10px 0;
+    }
+    >div {
+      box-sizing: border-box;
+      margin: 10px 5px;
+      padding: 10px;
+    }
+    &.left_container {
+      max-width: 240px;
+      min-width: 240px;
+      .name_container {
+        display: block;
+      }
+      .country_selection_container {
+        .search_container {
+          margin: 0 0 20px 0;
+          input {
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-family: Inter, Helvetica Neue, Helvetica, Arial, sans-serif;
+            outline: none;
+            padding: 5px 7px 3px 7px;
+            transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+            width: 100%;
+          }
+        }
+        h4 {
+          font-size: 14px;
+          margin: 0 0 5px 0;
+        }
+        .selection_list {
+          font-size: 13px;
+          height: 360px;
+          list-style-type: none;
+          margin: 0;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          padding: 0;
+          label {
+            cursor: pointer;
+            display: block;
+            font-weight: 400;
+            margin: 0;
+            .input_container {
+              vertical-align: middle;
+            }
+            .label_container {
+              margin-left: 3px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+    &.right_container {
+      min-width: 730px;
+      width: 100%;
+      .title_container {
+        .options_container {
+          float: right;
+          margin-top: -1px;
+          label {
+            display: inline-block;
+            margin-right: 20px;
+          }
+          .button_group {
+            border-left: 1px solid #ccc;
+            display: inline-block;
+            height: 20px;
+            margin: 0 5px;
+            vertical-align: middle;
+          }
+          .input_container {
+            button {
+              background-color: @ungrey;
+              border: 0;
+              color: #fff;
+              cursor: pointer;
+              font-family: Inter, Helvetica Neue, Helvetica, Arial, sans-serif;
+              font-size: 12px;
+              letter-spacing: 0.05em;
+              margin: 0 3px;
+              padding: 5px 7px 3px 7px;
+              text-transform: uppercase;
+              &:hover {
+                transform: scale(1.05);
+              }
+              &.selected {
+                font-weight: bold;
+                background-color: @unblue;
+                cursor: default;
+                &:hover {
+                  transform: scale(1.00);
+                }
+              }
+              &.linearlogarithmic {
+                display: inline;
+              }
+              &.data_type {
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+      .chart_container {
+        max-width: 100%;
+        min-height: 500px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        hr {
+          border-color: #eeeeee;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          margin: 0.5em 0;
+        }
+        .info {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          min-height: 440px;
+          text-align: center;
+          vertical-align: middle;
+        }
+        .unctad_logo {
+          bottom: 10px;
+          height: 80px;
+          position: absolute;
+          right: 10px;
+          width: 80px;
+          z-index: 3;
+        }
+        .highchart_container {
+          font-family: Inter, Helvetica Neue, Helvetica, Arial, sans-serif;
+          min-height: 440px;
+          width: 100%;
+          .tooltip_container {
+            .tooltip_header {
+              color: #000;
+              font-size: 20px;
+              margin: 0 0 5px 0;
+            }
+            .tooltip_label {
+              font-size: 14px;
+              font-weight: 700;
+            }
+            .tooltip_value {
+              font-size: 14px;
+              font-weight: 400;
+            }
+          }
+          .highcharts-button-hover {
+            rect {
+              fill: #fff;
+            }
+            .highcharts-button-symbol {
+              stroke: @ungrey;
+            }
+          }
+          .highcharts-button-symbol {
+            stroke: #000;
+          }
+          .highcharts-contextmenu {
+            li {
+              font-size: 12px !important;
+              &:hover {
+                background-color: @unblue !important; 
+              }
+            }
+          }
+        }
+        .legend_container {
+          height: 20px;
+          margin-bottom: 10px;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          padding-right: 70px;
+          button {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 9px;
+            svg {
+              height: 16px;
+              width: 16px;
+            }
+          }
+        }
+      }
+      .source_container {
+        color: @ungreytext;
+        font-size: 13px;
+        margin-bottom: 5px;
+        a {
+          color: @unbluetext;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

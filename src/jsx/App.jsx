@@ -1,4 +1,6 @@
-import React, { /* useState, */useEffect, useRef, useCallback } from 'react';
+import React, {
+  useState, useEffect, useRef, useCallback
+} from 'react';
 import '../styles/styles.less';
 
 // https://www.npmjs.com/package/react-is-visible
@@ -8,14 +10,65 @@ import { useIsVisible } from 'react-is-visible';
 import scrollIntoView from 'scroll-into-view';
 
 import Header from './components/Header.jsx';
+import DwChartContainer from './components/DwChartContainer.jsx';
 import ChapterHeader from './components/ChapterHeader.jsx';
 import ParallaxImage from './components/ParallaxImage.jsx';
+import FDIExplorer from './components/FDIExplorer.jsx';
 
 function App() {
   const appRef = useRef();
   const overviewRef = useRef();
   const chaptersContainerRef = useRef();
   const chapter1Ref = useRef();
+  const chapter2Ref = useRef();
+  const chapter3Ref = useRef();
+
+  const fixedSectionRefFigureFDIExplorer = useRef();
+  const chartFigureFDIExplorer = useRef(null);
+  const [positionFigureFDIExplorer, setPositionFigureFDIExplorer] = useState('');
+  const handleScrollFigure03 = useCallback(() => {
+    if (!fixedSectionRefFigureFDIExplorer.current) return;
+
+    // 4 screens.
+    fixedSectionRefFigureFDIExplorer.current.style.height = `${3 * 130 + 80}vh`;
+
+    const { scrollY, innerHeight } = window;
+    let { top } = fixedSectionRefFigureFDIExplorer.current.getBoundingClientRect();
+    top += scrollY;
+    const { height } = fixedSectionRefFigureFDIExplorer.current.getBoundingClientRect();
+    const fixedBottom = top + height - innerHeight;
+    const relativeScroll = scrollY - top;
+
+    // Determine position state
+    setPositionFigureFDIExplorer((scrollY < top) ? 'absolute_top' : (scrollY < fixedBottom) ? 'fixed' : 'absolute_bottom');
+
+    if (!chartFigureFDIExplorer.current) return;
+
+    // Define switch points
+    const switchPoints = [innerHeight * 0.3 + innerHeight * 0.8, innerHeight * 1.6 + innerHeight * 0.8, innerHeight * 2.9 + innerHeight * 0.8];
+
+    const newState = {
+      isAbove1: relativeScroll < switchPoints[0],
+      isAbove2: relativeScroll < switchPoints[1],
+      isAbove3: relativeScroll < switchPoints[2],
+    };
+    if (newState.isAbove2) {
+      fixedSectionRefFigureFDIExplorer.current.querySelector('.fixed-background .overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+      fixedSectionRefFigureFDIExplorer.current.querySelector('.fixed-background .overlay').style.pointerEvents = 'auto';
+      fixedSectionRefFigureFDIExplorer.current.querySelector('.scroll-elements').style.pointerEvents = 'auto';
+    } else {
+      fixedSectionRefFigureFDIExplorer.current.querySelector('.fixed-background .overlay').style.backgroundColor = 'rgba(0, 0, 0, 0)';
+      fixedSectionRefFigureFDIExplorer.current.querySelector('.fixed-background .overlay').style.pointerEvents = 'none';
+      fixedSectionRefFigureFDIExplorer.current.querySelector('.scroll-elements').style.pointerEvents = 'none';
+    }
+
+    chartFigureFDIExplorer.current.redraw();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScrollFigure03);
+    return () => window.removeEventListener('scroll', handleScrollFigure03);
+  }, [handleScrollFigure03]);
 
   const analytics = window.gtag || undefined;
   const track = useCallback((label_event = false, value_event = false) => {
@@ -143,7 +196,6 @@ function App() {
           </div>
         </div>
       </div>
-
       <div className="chapters_container" ref={chaptersContainerRef}>
         <div className="content_container chapter_header_1" ref={chapter1Ref}>
           <div className="text_container">
@@ -155,6 +207,75 @@ function App() {
             <div className="text_content">
               <h3>Breakthroughs in AI are reshaping all industries – from content creation and product design to automated coding and customer service.</h3>
               <p>But AI development is highly concentrated. Just 100 companies funded 40% of research and development (R&D) in 2022. None of them are based in developing countries except China. The United States and China account for about 33% of AI publications and 60% of AI patents.</p>
+              <p>This imbalance is also seen in AI infrastructure. AI needs more than electricity and the internet. It requires computing power, servers and data centres.</p>
+              <p>The US holds one third of the top supercomputers and over half the world’s computing power. Most supercomputers and data centres are in developed countries.</p>
+              <p>Skills are also key – from data literacy to expert-level AI knowledge. But these skills are unevenly distributed.</p>
+            </div>
+          </div>
+        </div>
+        <div className="content_container chapter_header_2" ref={chapter2Ref}>
+          <div className="text_container">
+            <ChapterHeader chapter_number="2" title="AI at the technology frontier" />
+            <div className="download_buttons_container">
+              <a href="https://unctad.org/system/files/official-document/tir2025ch1_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 1" rel="noreferrer">Download</a>
+            </div>
+            <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/l/_image_01_.jpg" /></div></div>
+            <div className="text_content">
+              <h3>Breakthroughs in AI are reshaping all industries – from content creation and product design to automated coding and customer service.</h3>
+              <p>But AI development is highly concentrated. Just 100 companies funded 40% of research and development (R&D) in 2022. None of them are based in developing countries except China. The United States and China account for about 33% of AI publications and 60% of AI patents.</p>
+            </div>
+            <div className="charts_container">
+              <DwChartContainer chart_id="Ggqdq" />
+            </div>
+            <div className="text_content">
+              <p>This imbalance is also seen in AI infrastructure. AI needs more than electricity and the internet. It requires computing power, servers and data centres.</p>
+              <p>The US holds one third of the top supercomputers and over half the world’s computing power. Most supercomputers and data centres are in developed countries.</p>
+              <p>Skills are also key – from data literacy to expert-level AI knowledge. But these skills are unevenly distributed.</p>
+            </div>
+          </div>
+        </div>
+
+        <div ref={fixedSectionRefFigureFDIExplorer} className="fixed-section">
+          <div className={`fixed-background ${positionFigureFDIExplorer}`}>
+            <div className="overlay" />
+            <div className="scroll-indicator"><div className="arrow" /></div>
+            <div className="chart_container_full">
+              <FDIExplorer ref={chartFigureFDIExplorer} />
+            </div>
+          </div>
+          <div className="scroll-elements">
+            <div className="scroll-content">
+              <div>
+                <p>
+                  This chart allows you to explore the foreign direct investments
+                </p>
+              </div>
+            </div>
+            <div className="scroll-content">
+              <div>
+                <p>
+                  Choose a region or economy of interest and compare.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="content_container chapter_header_3" ref={chapter3Ref}>
+          <div className="text_container">
+            <ChapterHeader chapter_number="3" title="AI at the technology frontier" />
+            <div className="download_buttons_container">
+              <a href="https://unctad.org/system/files/official-document/tir2025ch1_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 1" rel="noreferrer">Download</a>
+            </div>
+            <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/l/_image_01_.jpg" /></div></div>
+            <div className="text_content">
+              <h3>Breakthroughs in AI are reshaping all industries – from content creation and product design to automated coding and customer service.</h3>
+              <p>But AI development is highly concentrated. Just 100 companies funded 40% of research and development (R&D) in 2022. None of them are based in developing countries except China. The United States and China account for about 33% of AI publications and 60% of AI patents.</p>
+            </div>
+            <div className="charts_container">
+              <DwChartContainer chart_id="kXbpz" />
+              <DwChartContainer chart_id="6kd9k" />
+            </div>
+            <div className="text_content">
               <p>This imbalance is also seen in AI infrastructure. AI needs more than electricity and the internet. It requires computing power, servers and data centres.</p>
               <p>The US holds one third of the top supercomputers and over half the world’s computing power. Most supercomputers and data centres are in developed countries.</p>
               <p>Skills are also key – from data literacy to expert-level AI knowledge. But these skills are unevenly distributed.</p>
