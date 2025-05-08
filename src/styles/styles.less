@@ -1,0 +1,169 @@
+@import './colors.less';
+
+#app-root-2025-wir_report .app {
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  margin: auto auto;
+  width: 100%;
+  @import './download_buttons.less';
+  @import './components/header.less';
+
+  >.chapters_container >.content_container,
+  >.content_container {
+    background-color: #fff;
+    background-image: url('../assets/img/2025tir.jpg');
+    background-position: -200px -600px;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    border-bottom: 40px solid #009edb;
+    padding: 100px 0;
+    position: relative;
+    z-index: 3;
+    .recommendations,
+    .content {
+      background-color: #fff;
+      margin: auto auto auto auto;
+      max-width: 900px;
+      transition: height .5s ease;
+    }
+    .media_container {
+      margin-bottom: 20px;
+      .image_container {
+        margin: auto auto;
+        text-align: center;
+        width: 100%;
+        .parallax-container {
+          position: relative;
+          transition: all 1s ease;
+          img {
+            padding: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .text_container {
+      box-sizing: border-box;
+      margin: auto auto;
+      max-width: 1000px;
+      padding: 0 10px;
+      position: relative;
+      z-index: 2;
+      .text_content {
+        margin: auto auto;
+        max-width: 750px;
+        h3 {
+          font-size: 30px;
+          font-weight: 800;
+          @media all and (max-width: 576px) {
+            font-size: 24px;
+          }
+        }
+        ul,
+        ol,
+        blockquote,
+        p {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          margin: 0 0 20px 0;
+          @media all and (max-width: 576px) {
+            font-size: 18px;
+            line-height: 22px;
+          }
+          strong {
+            font-weight: 700
+          }
+        }
+        ul {
+          padding: 0;
+          li {
+            list-style-type: none;
+            margin: 0 0 10px 0;
+            padding: 0 0 0 40px;
+            position: relative;
+            &.oneliner {
+              font-size: 28px;
+              margin: 30px 0;
+              &:before {
+                top: 0px;
+              }
+            }
+            &:before {
+              background-image: url('./../assets/img/icons/arrow_yellow.png');
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              content: '';
+              display: inline-block;
+              height: 30px;
+              left: 0;
+              position: absolute;
+              top: 10px;
+              width: 30px;
+              z-index: 1;
+            }
+          }
+        }
+        h3,
+        p,
+        blockquote,
+        ul {
+          opacity: 0;
+          &.visible {
+            opacity: 1;
+            transition: opacity 1.5s ease-in-out;
+          }
+        }
+        blockquote {
+          border: 0;
+          margin: 0 0 20px 0;
+          padding: 40px 0 0 100px;
+          position: relative;
+          .quote {
+            margin-bottom: 20px;
+          }
+          .author {
+            .name {
+              font-weight: 600;
+              display: block;
+            }
+          }
+          &:before {
+            background-image: url('./../assets/img/icons/icon_quote_big.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            content: '';
+            display: inline-block;
+            height: calc(129px / 1.5);
+            left: 0;
+            position: absolute;
+            top: 0;
+            vertical-align: middle;
+            width: calc(139px / 1.5);
+          }
+        }
+      }
+      h2 {
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: 900;
+        margin: 0 0 20px auto;
+        @media all and (max-width: 576px) {
+          font-size: 42px;
+          line-height: 42px;
+        }
+        &:after {
+          display: none;
+        }
+        .chapter {
+          color: #888;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@import './basics.less';
