@@ -162,8 +162,8 @@ const App = forwardRef((props, ref) => {
         marginTop: 40,
         events: {
           redraw() {
-            // eslint-disable-next-line react/no-this-in-sfc
-            this.series.forEach((series) => {
+            const chart = this;
+            chart.series.forEach((series) => {
               series.userOptions.showInLegend = series.visible;
               series.showInLegend = series.visible;
             });
@@ -218,22 +218,22 @@ const App = forwardRef((props, ref) => {
               color: 'rgba(0, 0, 0, 0.8)',
               fontSize: '14px'
             },
-            text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2024',
+            text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2025',
             verticalAlign: 'bottom',
             x: 0
           },
           chart: {
             events: {
               load() {
-                // eslint-disable-next-line react/no-this-in-sfc
-                this.renderer.image('https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg', 15, 15, 44, 43.88).add();
+                const chart = this;
+                chart.renderer.image('https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg', 15, 15, 44, 43.88).add();
               }
             },
             height: 600,
             marginTop: null
           },
           legend: {
-            enabled: true
+            enabled: false
           },
           subtitle: {
             align: 'left',

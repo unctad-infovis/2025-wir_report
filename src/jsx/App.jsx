@@ -29,7 +29,7 @@ function App() {
   const handleScrollFigure03 = useCallback(() => {
     if (!fixedSectionRefFigureFDIExplorer.current) return;
 
-    // 4 screens.
+    // 3 screens.
     fixedSectionRefFigureFDIExplorer.current.style.height = `${3 * 130 + 80}vh`;
 
     const { scrollY, innerHeight } = window;
