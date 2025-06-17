@@ -179,7 +179,7 @@ function App() {
       <div className="content_container" ref={overviewRef}>
         <div className="text_container">
           <div className="text_content">
-            <h3>Global foreign direct investment (FDI) rose 4% in 2024 to $1.5 trillion, but the headline figure is misleading and masks deep underlying weaknesses.</h3>
+            <h3>Global foreign direct investment (FDI) rose 4% in 2024 to $1.5 trillion, but the headline figure is misleading and masks deep underlying weaknesses</h3>
             <p>Growth was inflated by volatile financial flows through several European conduit economies, often used as intermediaries in global tax and investment chains. Excluding these, global FDI fell 11% – the third straight year of decline.</p>
             <p>This year’s World Investment Report warns that investment is slowing, risks are rising, and uncertainty is reshaping the investment landscape. Trade tensions, policy fragmentation and economic volatility are squeezing capital flows, eroding investor confidence and dimming long-term development prospects.</p>
             <p>The report calls for bold, coordinated action to redirect investment towards sustainable and inclusive development – with a sharp focus on bridging divides in digital, infrastructure and sustainable finance.</p>
@@ -203,16 +203,13 @@ function App() {
             </div>
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter1.jpg" /></div></div>
             <div className="text_content">
-              <h3>Despite the headline rise in FDI in 2024, the real story is one of declining flows and growing imbalances.</h3>
+              <h3>Despite the headline rise in FDI in 2024, the real story is one of declining flows and growing imbalances</h3>
               <p>High borrowing costs and exchange rate volatility continue to deter long-term infrastructure investment, especially in the least developed countries.</p>
               <p>And multinationals are restructuring supply chains towards South-East Asia, Eastern Europe and Central America – a shift that began during the pandemic and is accelerating.</p>
-              <h3>Regional trends reveal sharp divides.</h3>
-            </div>
-            <div className="charts_container">
-              <DwChartContainer chart_id="jR2VD" />
+              <h3>Regional trends reveal sharp divides</h3>
             </div>
             <div className="text_content">
-              <h3>FDI to developed economies fell by 22%.</h3>
+              <h3>FDI to developed economies fell by 22%</h3>
               <p>
                 <strong>Europe</strong>
                 {' '}
@@ -344,8 +341,8 @@ function App() {
             </div>
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter2.jpg" /></div></div>
             <div className="text_content">
-              <h3>In 2024, investment policymaking was pulled in two directions: the need to attract capital, and the pressure to protect national interests.</h3>
-              <p>BRoughly 78% of new measures were labelled as pro-investment – especially in developing countries (89%).</p>
+              <h3>In 2024, investment policymaking was pulled in two directions: the need to attract capital, and the pressure to protect national interests</h3>
+              <p>Roughly 78% of new measures were labelled as pro-investment – especially in developing countries (89%).</p>
             </div>
             <div className="charts_container">
               <DwChartContainer chart_id="o7dOp" />
@@ -361,7 +358,7 @@ function App() {
                 {' '}
                 launched targeted promotion strategies, including in emerging sectors like green hydrogen.
               </p>
-              <h3>Incentives dominate global investment policy.</h3>
+              <h3>Incentives dominate global investment policy</h3>
               <p>Incentives, including tax breaks, grants or subsidies and credit guarantees, are now the leading tool governments are using to steer capital where they want it. They accounted for 45% of all new pro-investment measures in 2024, especially in clean energy and industrial sectors.</p>
             </div>
             <div className="charts_container">
@@ -371,7 +368,7 @@ function App() {
               <DwChartContainer chart_id="plHRH" />
             </div>
             <div className="text_content">
-              <h3>Meanwhile, restrictions tightened in strategic sectors – especially in developed economies.</h3>
+              <h3>Meanwhile, restrictions tightened in strategic sectors – especially in developed economies</h3>
               <p>More than 40% of all restrictive measures were screening mechanisms, aimed at monitoring foreign investment in sensitive sectors like high-tech, digital and critical minerals.</p>
               <p>The America First Investment Policy adopted in February 2024 significantly expands the scope of screening – for both inward and outward investment flows.</p>
             </div>
@@ -439,7 +436,7 @@ function App() {
             </div>
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter4.jpg" /></div></div>
             <div className="text_content">
-              <h3>The digital economy is growing faster than any other sector. In 2024, the sector got 8.3% of global FDI – up from X% in YEAR.</h3>
+              <h3>The digital economy is growing faster than any other sector. In 2024, the sector got 8.3% of global FDI – up from X% in YEAR</h3>
               <p>Investment in the digital economy brings clear benefits: better infrastructure, skilled jobs, technology transfer and more dynamic innovation ecosystems.</p>
             </div>
             <div className="charts_container">
@@ -447,7 +444,7 @@ function App() {
             </div>
             <div className="text_content">
               <p>Many low-income countries remain locked out. Infrastructure gaps, high investment risks and weak regulatory frameworks continue to deter capital.</p>
-              <h3>But growth is uneven.</h3>
+              <h3>But growth is uneven</h3>
               <p>FDI in the digital economy jumped 40% in 2024 and now accounts for nearly a third of all greenfield projects. But about 80% went to just 10 developing countries – most of them in Asia.</p>
             </div>
             <div className="charts_container">
@@ -476,7 +473,7 @@ function App() {
             </div>
             <div className="text_content">
               <p>Fintech is a key frontier, attracting rising investment in Asia and Latin America. Data centres are also expanding in middle-income economies. But least developed countries remain on the margins. In 2024, Africa saw only 18 fintech projects – compared to 206 in developing Asia – and claimed just 3% of total data centre investment.</p>
-              <h3>Concerns are rising.</h3>
+              <h3>Concerns are rising</h3>
               <p>The digital economy’s environmental footprint is growing, with rising energy use and e-waste.</p>
               <p>Another concern is that market dominance by a few firms – mostly headquartered in the US and China – stifles competition and crowds out local players.</p>
 
@@ -491,7 +488,7 @@ function App() {
               <DwChartContainer chart_id="v2kj5" />
             </div>
             <div className="text_content">
-              <h3>Digital strategies are in place – but not the support systems.</h3>
+              <h3>Digital strategies are in place – but not the support systems</h3>
               <p>By 2024, most developing countries had national digital strategies — 86% overall and 80% of least developed countries, up from under half in 2017.</p>
               <p>But few are linked to broader industrial or development goals. And only 20% mention investment promotion agencies, which often lack the tools to target fast-moving digital sectors.</p>
             </div>
@@ -525,7 +522,7 @@ function App() {
               <p>The World Investment Report 2025 calls for a fundamental redirection of investment.</p>
               <p>Scaling up capital flows is essential – but so is steering them towards sustainable infrastructure, digital inclusion, renewable energy and productive sectors.</p>
               <p>With COP30 and the 4th International Conference on Financing for Development on the horizon, this is a critical moment.</p>
-              <h3>The report sets out six priorities for action.</h3>
+              <h3>The report sets out six priorities for action</h3>
               <ol>
                 <li>
                   <strong>Reform the international financial system.</strong>
