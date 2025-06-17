@@ -16,13 +16,13 @@ function App(props) {
             20
             <span>25</span>
           </div>
-          <div className="name">World investment report</div>
+          <div className="name">World Investment Report</div>
         </h2>
       </div>
       <div className="between" />
       <div className="content_bottom">
         <h2>
-          Interesting and fashinating title of the report
+          International investment in the digital economy
           <div className="share_wrapper"><ShareContainer url={window.location.href} /></div>
         </h2>
         <div className="download_buttons_container">
@@ -31,6 +31,7 @@ function App(props) {
           <button type="button" className="video" onClick={() => scrollTo('.anchor_videos', 'Videos')}>Video</button>
           {/* <button type="button" className="podcast" onClick={() => scrollTo('.anchor_podcasts', 'Podcasts')}>Podcast</button> */}
           <button type="button" className="press" onClick={() => scrollTo('.anchor_press', 'Press')}>Press</button>
+          <a href="https://unctad.org/topic/investment/world-investment-report" target="_blank" type="button" aria-label="Regional and country data" className="regional" rel="noreferrer">Regional and country data</a>
         </div>
         <div className="chapters_navigation_container">
           {

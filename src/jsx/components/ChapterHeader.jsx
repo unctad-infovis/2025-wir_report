@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import PropTypes from 'prop-types';
 
+function isNumeric(value) {
+  return !Number.isNaN(value) && !Number.isNaN(parseFloat(value));
+}
+
 function ChapterHeader(props) {
   const { chapter_number, title } = props;
   const headerRef = useRef(null);
@@ -30,9 +34,18 @@ function ChapterHeader(props) {
       <div className="" style={{ opacity: scrollPercentage, transform: `translateX(${-(1 - scrollPercentage) * 30}%)` }}>
         <h2>
           <div className="chapter">
-            Chapter
-            {' '}
-            {chapter_number}
+            {isNumeric(chapter_number) && (
+              <div>
+                Chapter
+                {' '}
+                {chapter_number}
+              </div>
+            )}
+            {!isNumeric(chapter_number) && (
+              <div>
+                {chapter_number}
+              </div>
+            )}
           </div>
           <div>
             {title}

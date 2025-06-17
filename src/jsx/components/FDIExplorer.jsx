@@ -80,7 +80,7 @@ Highcharts.setOptions({
 
 // Define chart container.
 const start_year = 1990;
-const end_year = 2023;
+const end_year = 2024;
 const years = (Array(end_year - start_year + 1).fill().map((_, idx) => start_year + idx));
 
 const App = forwardRef((props, ref) => {
@@ -132,7 +132,7 @@ const App = forwardRef((props, ref) => {
   }, [dataType, visible]);
 
   useEffect(() => {
-    const data_file = (window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2024-wir_report/assets/data/2024-wir_report_figure1.json' : './assets/data/2025-fdi_explorer.json';
+    const data_file = (window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2025-wir_report/assets/data/2025-wir_report_figure1.json' : './assets/data/2025-fdi_explorer.json';
     try {
       fetch(data_file)
         .then((response) => {
@@ -568,7 +568,7 @@ const App = forwardRef((props, ref) => {
             // Title
           }
           <div className="title_container">
-            <h3>By region and economy, 1990–2023</h3>
+            <h3>By region and economy, 1990–2024</h3>
             <div className="options_container">
               {
                 // <label style={{display: 'none'}}>
