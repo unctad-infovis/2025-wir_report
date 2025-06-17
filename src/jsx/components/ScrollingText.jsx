@@ -29,7 +29,7 @@ function ScrollingText({ chapter_text, texts }) {
       {(scrollProgress > 0 && scrollProgress < 1) && <div className="background" />}
       {texts.map((text, index) => {
         const baseOffset = 100 * (index + 1) + 100;
-        const translateX = baseOffset - scrollProgress * 400;
+        const translateX = baseOffset - scrollProgress * 450;
         let opacity = 1;
         if (translateX > 30) {
           opacity = (1 - (translateX * 1.2 - 30) / 100);
