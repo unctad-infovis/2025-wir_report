@@ -92,7 +92,7 @@ function App() {
   const isVisibleChapterOverview = useIsVisible(overviewRef);
 
   useEffect(() => {
-    const paragraphs = chaptersContainerRef.current.querySelectorAll('.text_content p, .text_content ul, .text_content ol, .text_content h3, .text_content blockquote');
+    const paragraphs = appRef.current.querySelectorAll('.text_content p, .text_content ul, .text_content ol, .text_content h3, .text_content blockquote');
 
     // Options for the observer (when the p tag is 50% in the viewport)
     const options = {
