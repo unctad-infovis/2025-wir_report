@@ -147,13 +147,6 @@ const App = forwardRef((props, ref) => {
     }
   }, [cleanData]);
 
-  useEffect(() => {
-    if (document.querySelector('.title_container .unctad_logo img')) {
-      document.querySelector('.title_container .unctad_logo img').src = '/themes/custom/newyork_b5/images/logo_small_white_en.png';
-      document.querySelector('.title_container .unctad_logo img').style.width = '300px';
-    }
-  }, []);
-
   const createChart = useCallback(() => {
     ref.current = Highcharts.chart('highchart-container', {
       caption: {
