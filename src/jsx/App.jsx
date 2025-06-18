@@ -310,13 +310,10 @@ function App() {
             </div>
             <div className="text_content">
               <h3>Top 10 source and destination economies for FDI.</h3>
-              <p>The leading destinations for FDI were the United States, Singapore, Hong Kong SAR (China), China, Luxembourg, Canada, Brazil, Australia, Egypt and the United Arab Emirates.</p>
+              <p>The US remains both the top source and destination for foreign direct investment (FDI). Notably, five Asian economies rank among the top 10 sources of FDI outflows, underscoring the region’s key role as a global investor.</p>
             </div>
             <div className="charts_container">
               <DwChartContainer chart_id="MZLZN" />
-            </div>
-            <div className="text_content">
-              <p>The top sources of outbound investment were the United States, Japan, China, Luxembourg, Hong Kong (China), Canada, Singapore, the Netherlands, Spain and the Republic of Korea.</p>
             </div>
             <div className="charts_container">
               <DwChartContainer chart_id="S9JVG" />
