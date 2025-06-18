@@ -217,7 +217,7 @@ function App() {
         <div className="backtotop_container">
           <button type="button" onClick={() => scrollTo('.header_container', 'Top')}>Back to top</button>
         </div>
-        <ScrollingText texts={['Where is investment going?', 'Which regions and sectors are being left behind?']} chapter_text="Chapter 1" />
+        <ScrollingText texts={['Where is foreign investment going?', 'Which regions and sectors are being left behind?']} chapter_text="Chapter 1" />
         <div className="content_container chapter_header_1" ref={chapter1Ref}>
           <div className="text_container">
             <ChapterHeader chapter_number="1" title="Investment trends" subtitle="Global flows remain weak and unbalanced" />
@@ -292,8 +292,8 @@ function App() {
                 <DwChartContainer chart_id="5EGiF" />
               </div>
               <h3>Who are the top global players?</h3>
-              <p>The leading destinations for FDI were the US, Singapore, Hong Kong (China), China, Luxembourg, Canada, Brazil, Australia, Egypt and the United Arab Emirates.</p>
-              <p>The top sources of outbound investment were the US, Japan, China, Luxembourg, Hong Kong (China), Canada, Singapore, the Netherlands, Spain and the Republic of Korea.</p>
+              <p>The leading destinations for FDI were the US, Singapore, China‚ Hong Kong SAR, China, Luxembourg, Canada, Brazil, Australia, Egypt and the United Arab Emirates.</p>
+              <p>The top sources of outbound investment were the US, Japan, China, Luxembourg, China‚ Hong Kong SAR, Canada, Singapore, the Netherlands, Spain and the Republic of Korea.</p>
               <h3>What’s happening across sectors and industries?</h3>
             </div>
             <div className="text_content">
