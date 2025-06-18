@@ -100,8 +100,36 @@
           }
         }
         ol {
+          padding: 0;
+          counter-reset: section;
           li {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
             margin: 0 0 10px 0;
+            min-height: 40px;
+            padding: 0 0 0 50px;
+            position: relative;
+            vertical-align: middle;
+            &:before {
+              background-color: #ffcb05;
+              border-radius: 50%;
+              color: #333;
+              content: counter(section);
+              counter-increment: section;
+              display: inline-block;
+              font-size: 22px;
+              font-weight: bold;
+              height: 40px;
+              left: 0;
+              line-height: 40px;
+              position: absolute;
+              text-align: center;
+              top: 8px;
+              width: 40px;
+              z-index: 1;
+            }
           }
         }
         ul {
@@ -430,5 +458,7 @@
     }
   }
 }
+
+@import './footer.less';
 
 @import './basics.less';

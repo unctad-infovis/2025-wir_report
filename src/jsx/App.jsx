@@ -622,34 +622,46 @@ function App() {
               <h3>UN Trade and Development sets out six priorities for action.</h3>
               <ol>
                 <li>
-                  <strong>Reform the international financial system.</strong>
-                  {' '}
-                  Triple development bank lending through hybrid capital and rechannelled special drawing rights to close financing gaps and address systemic challenges.
+                  <span>
+                    <strong>Reform the international financial system.</strong>
+                    {' '}
+                    Triple development bank lending through hybrid capital and rechannelled special drawing rights to close financing gaps and address systemic challenges.
+                  </span>
                 </li>
                 <li>
-                  <strong>Mobilize capital at scale.</strong>
-                  {' '}
-                  Strengthen multilateral cooperation to manage global risks and build a fairer, more balanced financial system.
+                  <span>
+                    <strong>Mobilize capital at scale.</strong>
+                    {' '}
+                    Strengthen multilateral cooperation to manage global risks and build a fairer, more balanced financial system.
+                  </span>
                 </li>
                 <li>
-                  <strong>Scale sustainable finance.</strong>
-                  {' '}
-                  Embed development goals into financial strategies, apply clear sustainability standards and prioritize long-term needs – especially in countries with the greatest shortfalls.
+                  <span>
+                    <strong>Scale sustainable finance.</strong>
+                    {' '}
+                    Embed development goals into financial strategies, apply clear sustainability standards and prioritize long-term needs – especially in countries with the greatest shortfalls.
+                  </span>
                 </li>
                 <li>
-                  <strong>Close the digital economy investment divide.</strong>
-                  {' '}
-                  Expand digital infrastructure, support inclusive national strategies and build local skills and innovation capacity.
+                  <span>
+                    <strong>Close the digital economy investment divide.</strong>
+                    {' '}
+                    Expand digital infrastructure, support inclusive national strategies and build local skills and innovation capacity.
+                  </span>
                 </li>
                 <li>
-                  <strong>Reform investment policies.</strong>
-                  {' '}
-                  Align national investment strategies with sustainability goals – and steer capital towards digital, clean energy, infrastructure and productive sectors.
+                  <span>
+                    <strong>Reform investment policies.</strong>
+                    {' '}
+                    Align national investment strategies with sustainability goals – and steer capital towards digital, clean energy, infrastructure and productive sectors.
+                  </span>
                 </li>
                 <li>
-                  <strong>Improve global investment governance</strong>
-                  {' '}
-                  Update international rules to protect public interests, ensure fair treatment for investors and preserve national policy space.
+                  <span>
+                    <strong>Improve global investment governance</strong>
+                    {' '}
+                    Update international rules to protect public interests, ensure fair treatment for investors and preserve national policy space.
+                  </span>
                 </li>
               </ol>
             </div>
