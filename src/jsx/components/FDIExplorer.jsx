@@ -163,7 +163,7 @@ const App = forwardRef((props, ref) => {
           color: 'rgba(255, 255, 255, 0.8)',
           fontSize: '14px'
         },
-        text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2025<br /><em>Note:</em> The data includes all economies.',
+        text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2025<br /><em>Note:</em> The data includes financial transactions through European economies with high levels of conduit flows.',
         verticalAlign: 'bottom',
         x: 0
       },
@@ -229,7 +229,7 @@ const App = forwardRef((props, ref) => {
               color: 'rgba(255, 255, 255, 0.8)',
               fontSize: '14px'
             },
-            text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2025<br /><em>Note:</em> The data excludes financial transactions through several European economies with high levels of conduit flows.',
+            text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2025<br /><em>Note:</em> The data includes financial transactions through European economies with high levels of conduit flows.',
             verticalAlign: 'bottom',
             x: 0
           },

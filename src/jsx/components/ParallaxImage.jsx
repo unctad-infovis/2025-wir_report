@@ -14,7 +14,7 @@ function ChapterHeader(props) {
 
   return (
     <div className="parallax-container" style={{ opacity: (isVisible) ? '1' : '0', top: (isVisible) ? '0px' : '50px' }}>
-      <img ref={imageRef} src={`https://storage.unctad.org/2025-wir_report/${src}`} alt="Parallax" className="parallax-image" />
+      <img ref={imageRef} src={`https://storage.unctad.org/2025-wir_report/${src}`} alt="Chapter opening" className="parallax-image" />
     </div>
   );
 }
