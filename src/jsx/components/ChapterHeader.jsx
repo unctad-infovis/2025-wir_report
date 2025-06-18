@@ -7,7 +7,7 @@ function isNumeric(value) {
 }
 
 function ChapterHeader(props) {
-  const { chapter_number, title } = props;
+  const { chapter_number, subtitle, title } = props;
   const headerRef = useRef(null);
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
@@ -50,6 +50,11 @@ function ChapterHeader(props) {
           <div>
             {title}
           </div>
+          {subtitle && (
+            <div className="subtitle">
+              {subtitle}
+            </div>
+          )}
         </h2>
       </div>
     </div>
@@ -58,6 +63,7 @@ function ChapterHeader(props) {
 
 ChapterHeader.propTypes = {
   chapter_number: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 };
 

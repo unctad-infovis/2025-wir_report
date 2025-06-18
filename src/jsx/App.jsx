@@ -26,6 +26,21 @@ function App() {
   const chapter4Ref = useRef();
   const chapter5Ref = useRef();
 
+  const [offset, setOffset] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  const [sectionProgress, setSectionProgress] = useState(0);
+
+  useEffect(() => {
+    const windowHeight = 0;
+    setSectionProgress((offset > chaptersContainerRef.current.offsetTop - windowHeight) ? (Math.min(((offset - (chaptersContainerRef.current.offsetTop - windowHeight)) / chaptersContainerRef.current.offsetHeight) * 100, 100)) : 0);
+  }, [offset]);
+
   const fixedSectionRefFigureFDIExplorer = useRef();
   const chartFigureFDIExplorer = useRef(null);
   const [positionFigureFDIExplorer, setPositionFigureFDIExplorer] = useState('');
@@ -119,7 +134,7 @@ function App() {
     }, 500); // A short delay ensures the DOM is ready
   }, []);
 
-  const chapterTitles = ['International investment trends', 'Investment policy trends', 'Sustainable finance trends', 'International investment in the digital economy', 'Recom\u00ADmenda\u00ADtions'];
+  const chapterTitles = ['International investment trends', 'Investment policy trends', 'Sustainable finance trends', 'International investment in the digital economy', 'The way forward'];
 
   const downloadDocument = (event) => {
     track('Anchor', `${event.currentTarget.href}`);
@@ -194,10 +209,18 @@ function App() {
         </div>
       </div>
       <div className="chapters_container" ref={chaptersContainerRef}>
+        <div className="progress_indicator_container">
+          <div className="section">
+            <div className="progress_bar" style={{ width: `${sectionProgress}%` }} />
+          </div>
+        </div>
+        <div className="backtotop_container">
+          <button type="button" onClick={() => scrollTo('.header_container', 'Top')}>Back to top</button>
+        </div>
         <ScrollingText texts={['Where is investment going?', 'Which regions and sectors are being left behind?']} chapter_text="Chapter 1" />
         <div className="content_container chapter_header_1" ref={chapter1Ref}>
           <div className="text_container">
-            <ChapterHeader chapter_number="1" title="Investment trends – global flows remain weak and unbalanced" />
+            <ChapterHeader chapter_number="1" title="Investment trends" subtitle="Global flows remain weak and unbalanced" />
             <div className="download_buttons_container">
               <a href="https://unctad.org/system/files/official-document/wir2025ch1_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 1" rel="noreferrer">Download</a>
             </div>
@@ -335,7 +358,7 @@ function App() {
         <ScrollingText texts={['What are governments doing to attract or control investment?']} chapter_text="Chapter 2" />
         <div className="content_container chapter_header_2" ref={chapter2Ref}>
           <div className="text_container">
-            <ChapterHeader chapter_number="2" title="Investment policy trends – incentives rise, but so do restrictions" />
+            <ChapterHeader chapter_number="2" title="Investment policy trends" subtitle="Incentives rise, but so do restrictions" />
             <div className="download_buttons_container">
               <a href="https://unctad.org/system/files/official-document/wir2025ch2_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 2" rel="noreferrer">Download</a>
             </div>
@@ -383,7 +406,7 @@ function App() {
         <ScrollingText texts={['Is sustainable finance delivering?']} chapter_text="Chapter 3" />
         <div className="content_container chapter_header_3" ref={chapter3Ref}>
           <div className="text_container">
-            <ChapterHeader chapter_number="3" title="Sustainable finance trends – bonds grow, but trust and traction wane" />
+            <ChapterHeader chapter_number="3" title="Sustainable finance trends" subtitle="Bonds grow, but trust and traction wane" />
             <div className="download_buttons_container">
               <a href="https://unctad.org/system/files/official-document/wir2025ch3_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 3" rel="noreferrer">Download</a>
             </div>
@@ -430,7 +453,7 @@ function App() {
         <ScrollingText texts={['Can international investment close the digital divide?']} chapter_text="Chapter 4" />
         <div className="content_container chapter_header_4" ref={chapter4Ref}>
           <div className="text_container">
-            <ChapterHeader chapter_number="4" title="International investment in the digital economy – rapid growth, uneven gains" />
+            <ChapterHeader chapter_number="4" title="International investment in the digital economy" subtitle="Rapid growth, uneven gains" />
             <div className="download_buttons_container">
               <a href="https://unctad.org/system/files/official-document/wir2025ch4_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 4" rel="noreferrer">Download</a>
             </div>
@@ -511,10 +534,10 @@ function App() {
             </div>
           </div>
         </div>
-        <ScrollingText texts={['More investment isn’t enough – it must be better aligned']} chapter_text="Recommendations" />
+        <ScrollingText texts={['More investment isn’t enough – it must be better aligned']} chapter_text="The way forward" />
         <div className="content_container chapter_header_5" ref={chapter5Ref}>
           <div className="text_container">
-            <ChapterHeader chapter_number="Recommendations" title="Redirecting investment towards development" />
+            <ChapterHeader chapter_number="The way forward" title="Redirecting investment towards development" />
             <div className="download_buttons_container">
               <a href="https://unctad.org/system/files/official-document/wir2025ch1_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 1" rel="noreferrer">Download</a>
             </div>

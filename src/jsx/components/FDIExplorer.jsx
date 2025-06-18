@@ -156,10 +156,19 @@ const App = forwardRef((props, ref) => {
 
   const createChart = useCallback(() => {
     ref.current = Highcharts.chart('highchart-container', {
+      caption: {
+        align: 'left',
+        margin: 15,
+        style: {
+          color: 'rgba(255, 255, 255, 0.8)',
+          fontSize: '14px'
+        },
+        text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2025<br /><em>Note:</em> The data includes all economies.',
+        verticalAlign: 'bottom',
+        x: 0
+      },
       chart: {
         backgroundColor: '#222',
-        height: 440,
-        marginTop: 40,
         events: {
           redraw() {
             const chart = this;
@@ -169,6 +178,8 @@ const App = forwardRef((props, ref) => {
             });
           }
         },
+        height: 440,
+        marginTop: 40,
         resetZoomButton: {
           theme: {
             fill: '#fff',
@@ -215,10 +226,10 @@ const App = forwardRef((props, ref) => {
             align: 'left',
             margin: 15,
             style: {
-              color: 'rgba(0, 0, 0, 0.8)',
+              color: 'rgba(255, 255, 255, 0.8)',
               fontSize: '14px'
             },
-            text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2025',
+            text: '<em>Source:</em> UN Trade and Development (UNCTAD), World investment report 2025<br /><em>Note:</em> The data excludes financial transactions through several European economies with high levels of conduit flows.',
             verticalAlign: 'bottom',
             x: 0
           },
@@ -487,18 +498,18 @@ const App = forwardRef((props, ref) => {
   };
 
   // This is to toggle linear or logarithmic scale.
-  const toggleLinearLogarithmicScale = (event, type) => {
-    ref.current.yAxis[0].update({
-      type
-    });
-    const elements = document.getElementsByClassName('linearlogarithmic');
-    for (let i = 0, all = elements.length; i < all; i++) {
-      elements[i].classList.remove('selected');
-    }
-    event.target.classList.add('selected');
+  // const toggleLinearLogarithmicScale = (event, type) => {
+  //   ref.current.yAxis[0].update({
+  //     type
+  //   });
+  //   const elements = document.getElementsByClassName('linearlogarithmic');
+  //   for (let i = 0, all = elements.length; i < all; i++) {
+  //     elements[i].classList.remove('selected');
+  //   }
+  //   event.target.classList.add('selected');
 
-    track('Toggle Scale', type);
-  };
+  //   track('Toggle Scale', type);
+  // };
 
   const search = (event) => {
     const visible_tmp = {};
@@ -578,13 +589,13 @@ const App = forwardRef((props, ref) => {
                 //   <span className={'label_container'}>Relative to Population</span>
                 // </label>
               }
-              <span className="input_container">
+              {/*              <span className="input_container">
                 <button onClick={(event) => toggleLinearLogarithmicScale(event, 'linear')} className="linearlogarithmic selected" title="Use linear scale on y-axis" aria-label="Use linear scale on y-axis" type="button">Linear</button>
-              </span>
-              <span className="input_container">
+              </span> */}
+              {/*              <span className="input_container">
                 <button onClick={(event) => toggleLinearLogarithmicScale(event, 'logarithmic')} className="linearlogarithmic" title="Use logarithmic scale on y-axis" aria-label="Use logarithmic scale on y-axis" type="button">Log</button>
-              </span>
-              <span className="button_group" />
+              </span> */}
+              {/* <span className="button_group" /> */}
               <span className="input_container">
                 <button onClick={(event) => changeDataType(event, 'fdi_inflows')} className="data_type selected" title="Select FDI inflows dataset" aria-label="Select FDI inflows dataset" type="button">Inflows</button>
               </span>
