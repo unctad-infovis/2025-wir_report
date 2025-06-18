@@ -611,9 +611,9 @@ function App() {
         <div className="content_container chapter_header_5" ref={chapter5Ref}>
           <div className="text_container">
             <ChapterHeader chapter_number="The way forward" title="Redirecting investment towards development" subtitle="More investment isn't enough – it must be better aligned" />
-            <div className="download_buttons_container">
+            {/* <div className="download_buttons_container">
               <a href="https://unctad.org/system/files/official-document/wir2025ch5_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 5" rel="noreferrer">Download</a>
-            </div>
+            </div> */}
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter5.jpg" /></div></div>
             <div className="text_content">
               <h3>The World Investment Report 2025 calls for a fundamental redirection of investment.</h3>
