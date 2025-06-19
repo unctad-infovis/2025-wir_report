@@ -26,13 +26,13 @@ function App(props) {
           <div className="share_wrapper"><ShareContainer url={window.location.href} /></div>
         </h2>
         <div className="download_buttons_container">
-          <a href="https://unctad.org/system/files/official-document/tir2025overview_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" aria-label="Download Overview" className="overview" rel="noreferrer">Overview</a>
-          <a href="https://unctad.org/system/files/official-document/tir2025_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" aria-label="Download Full Report" className="pdf_download" rel="noreferrer">Full report</a>
-          <button type="button" className="video" onClick={() => scrollTo('.anchor_videos', 'Videos')}>Video</button>
-          {/* <button type="button" className="podcast" onClick={() => scrollTo('.anchor_podcasts', 'Podcasts')}>Podcast</button> */}
+          <a href="https://unctad.org/system/files/official-document/wir2025_overview_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" aria-label="Download Overview" className="overview" rel="noreferrer">Overview</a>
+          <a href="https://unctad.org/system/files/official-document/wir2025_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" aria-label="Download Full Report" className="pdf_download" rel="noreferrer">Full report</a>
+          {/* <button type="button" className="video" onClick={() => scrollTo('.anchor_videos', 'Videos')}>Video</button> */}
+          <button type="button" className="podcast" onClick={() => scrollTo('.anchor_podcasts', 'Podcasts')}>Podcast</button>
           <button type="button" className="press" onClick={() => scrollTo('.anchor_press', 'Press')}>Press</button>
           <a href="https://unctad.org/topic/investment/world-investment-report" target="_blank" type="button" aria-label="Regional and country data" className="regional" rel="noreferrer">Regional data</a>
-          <button type="button" className="fdi_explorer" onClick={() => scrollTo('.anchor_videos', 'FDI Explorer')}>FDI Explorer</button>
+          <button type="button" className="fdi_explorer" onClick={() => scrollTo('.anchor_fdi_explorer', 'FDI Explorer')}>FDI explorer</button>
         </div>
         <div className="chapters_navigation_container">
           {
@@ -46,7 +46,10 @@ function App(props) {
                       {i + 1}
                       .
                     </div>
-                    <a href={`https://unctad.org/system/files/official-document/tir2025ch${i + 1}_en.pdf`} target="_blank" onClick={(event) => downloadDocument(event)} className="chapter_download_button" aria-label={`Download Chapter ${i + 1}`} rel="noreferrer" />
+                    {
+                      i < 4 && <a href={`https://unctad.org/system/files/official-document/wir2025_ch0${i + 1}_en.pdf`} target="_blank" onClick={(event) => downloadDocument(event)} className="chapter_download_button" aria-label={`Download Chapter ${i + 1}`} rel="noreferrer" />
+                    }
+
                   </div>
                 </div>
               </button>

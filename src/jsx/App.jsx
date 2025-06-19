@@ -152,7 +152,7 @@ function App() {
             lockX: false,
             lockY: false,
             top: 0,
-            topOffset: 30
+            topOffset: 40
           },
           cancellable: false,
           time: 1000
@@ -167,7 +167,7 @@ function App() {
             lockX: false,
             lockY: false,
             top: 0,
-            topOffset: 30
+            topOffset: 60
           },
           cancellable: false,
           time: 1000
@@ -219,14 +219,16 @@ function App() {
           </div>
         </div>
         <div className="backtotop_container">
-          <button type="button" onClick={() => scrollTo('.header_container', 'Top')}>Back to top</button>
+          <div>
+            <button type="button" onClick={() => scrollTo('.header_container', 'Top')}>Back to top</button>
+          </div>
         </div>
         <ScrollingText texts={['Where is foreign investment going?', 'Which regions and sectors are being left behind?']} chapter_text="Chapter 1" />
         <div className="content_container chapter_header_1" ref={chapter1Ref}>
           <div className="text_container">
             <ChapterHeader chapter_number="1" title="International investment trends" subtitle="Global flows remain weak and unbalanced" />
             <div className="download_buttons_container">
-              <a href="https://unctad.org/system/files/official-document/wir2025ch1_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 1" rel="noreferrer">Download</a>
+              <a href="https://unctad.org/system/files/official-document/wir2025_ch01_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="chapter_download" aria-label="Download Chapter 1" rel="noreferrer">Download</a>
             </div>
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter1.jpg" /></div></div>
             <div className="text_content">
@@ -355,7 +357,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div ref={fixedSectionRefFigureFDIExplorer} className="fixed-section">
+        <div ref={fixedSectionRefFigureFDIExplorer} className="fixed-section anchor_fdi_explorer">
           <div className={`fixed-background ${positionFigureFDIExplorer}`}>
             <div className="overlay" />
             <div className="scroll-indicator"><div className="arrow" /></div>
@@ -385,11 +387,11 @@ function App() {
           <div className="text_container">
             <ChapterHeader chapter_number="2" title="Investment policy trends" subtitle="Incentives rise, but so do restrictions" />
             <div className="download_buttons_container">
-              <a href="https://unctad.org/system/files/official-document/wir2025ch2_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 2" rel="noreferrer">Download</a>
+              <a href="https://unctad.org/system/files/official-document/wir2025_ch02_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="chapter_download" aria-label="Download Chapter 2" rel="noreferrer">Download</a>
             </div>
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter2.jpg" /></div></div>
             <div className="text_content">
-              <h3>In 2024, investment policymaking was pulled in two direction: the need to attract capital, and the pressure to protect national interests.</h3>
+              <h3>In 2024, investment policymaking was pulled in two directions: the need to attract capital, and the pressure to protect national interests.</h3>
               <p>Roughly 78% of new measures were labelled as favourable to investors – especially in developing countries (89%).</p>
             </div>
             <div className="charts_container">
@@ -420,7 +422,7 @@ function App() {
             <div className="text_content">
               <h3>Meanwhile, restrictions tightened in strategic sectors – especially in developed economies.</h3>
               <p>More than 40% of all restrictive measures in 2024 concerned screening mechanisms, aimed at monitoring foreign investment in sensitive sectors like high-tech and critical minerals.</p>
-              <p>The number of countries with FDI screening measures in place has more than doubled to 46 since 2015.</p>
+              <p>The number of countries with FDI screening regimes for national security has more than doubled to 46 since 2015.</p>
             </div>
             <div className="charts_container">
               <DwChartContainer chart_id="jRNrd" />
@@ -443,7 +445,7 @@ function App() {
           <div className="text_container">
             <ChapterHeader chapter_number="3" title="Sustainable finance trends" subtitle="Green bonds grow, but other products struggle amid credibility concerns" />
             <div className="download_buttons_container">
-              <a href="https://unctad.org/system/files/official-document/wir2025ch3_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 3" rel="noreferrer">Download</a>
+              <a href="https://unctad.org/system/files/official-document/wir2025_ch03_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="chapter_download" aria-label="Download Chapter 3" rel="noreferrer">Download</a>
             </div>
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter3.jpg" /></div></div>
             <div className="text_content">
@@ -507,18 +509,18 @@ function App() {
           <div className="text_container">
             <ChapterHeader chapter_number="4" title="International investment in the digital economy" subtitle="Rapid growth, uneven gains" />
             <div className="download_buttons_container">
-              <a href="https://unctad.org/system/files/official-document/wir2025ch4_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 4" rel="noreferrer">Download</a>
+              <a href="https://unctad.org/system/files/official-document/wir2025_ch04_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="chapter_download" aria-label="Download Chapter 4" rel="noreferrer">Download</a>
             </div>
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter4.jpg" /></div></div>
             <div className="text_content">
               <h3>Investment in the digital economy is growing fast, averaging $122 billion annually in recent years. Between 2021 and 2023, the sector received 8.3% of global FDI on average – up from 5.5% between 2012 and 2014.</h3>
               <p>For developing economies, average annual FDI flows to the digital economy nearly doubled over the same period.</p>
-              <p>Globally, the growth has been driven by expanding digital services, rising demand for software solutions and emerging tech talent and start-up ecosystems.</p>
             </div>
             <div className="charts_container">
               <DwChartContainer chart_id="qD8sl" />
             </div>
             <div className="text_content">
+              <p>Globally, the growth has been driven by expanding digital services, rising demand for software solutions and emerging tech talent and start-up ecosystems.</p>
               <p>Investment in the digital economy brings clear benefits: better infrastructure, skilled jobs, technology transfer and more dynamic innovation ecosystems.</p>
               <p>But many low-income countries remain locked out. Infrastructure gaps, high investment risks and weak regulatory frameworks continue to deter capital.</p>
               <h3>Growth is uneven.</h3>
@@ -540,7 +542,7 @@ function App() {
               <DwChartContainer chart_id="goKbo" />
             </div>
             <div className="text_content">
-              <p>Over the past five years, developing countries received $531 billion in digital greenfield projects – just 30% of the global total. The US remains the top source, but South–South flows are catching up, led by Asian investors.</p>
+              <p>Over the past five years, developing countries received $531 billion in greenfield projects in the digital economy – just 30% of the global total. The US remains the top source, but South–South flows are catching up, led by Asian investors.</p>
             </div>
             <div className="charts_container">
               <DwChartContainer chart_id="b0Sqp" />
@@ -553,7 +555,7 @@ function App() {
               <DwChartContainer chart_id="LnJ2y" />
             </div>
             <div className="text_content">
-              <p>Fintech is a key frontier, attracting rising investment in Asia and Latin America. Data centres are also expanding in middle-income economies. But least developed countries remain on the margins. In 2024, Africa saw only 18 fintech projects – compared to 206 in developing countries in Asia – and claimed just 3% of total data centre investment.</p>
+              <p>Fintech is a key frontier, attracting rising investment in Asia and Latin America. Data centres are now also major investment targets in middle-income economies. But least developed countries remain on the margins. In 2024, Africa saw only 18 fintech projects – compared to 206 in developing countries in Asia – and claimed just 3% of total data centre investment.</p>
               <p>
                 To learn more about the inequality risks linked to artificial intelligence and other digital technologies, see the
                 {' '}
@@ -611,9 +613,6 @@ function App() {
         <div className="content_container chapter_header_5" ref={chapter5Ref}>
           <div className="text_container">
             <ChapterHeader chapter_number="The way forward" title="Redirecting investment towards development" subtitle="More investment isn't enough – it must be better aligned" />
-            {/* <div className="download_buttons_container">
-              <a href="https://unctad.org/system/files/official-document/wir2025ch5_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" className="pdf_download" aria-label="Download Chapter 5" rel="noreferrer">Download</a>
-            </div> */}
             <div className="media_container"><div className="image_container"><ParallaxImage src="assets/img/2025wir-chapter5.jpg" /></div></div>
             <div className="text_content">
               <h3>The World Investment Report 2025 calls for a fundamental redirection of investment.</h3>

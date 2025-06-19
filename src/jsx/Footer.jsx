@@ -8,7 +8,7 @@ function Footer() {
         <h2>What do you want to do next?</h2>
         <div className="footer_elements">
           <div className="footer_element footer_element_1">
-            <div className="footer_content anchor_videos" id="anchor_videos">
+            <div className="footer_content anchor_videos hidden" id="anchor_videos">
               <h3>Watch the videos</h3>
               <div className="iframe_container youtube_iframe">
                 <iframe
@@ -71,12 +71,12 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="footer_content anchor_podcasts hidden" id="anchor_podcasts">
+            <div className="footer_content anchor_podcasts" id="anchor_podcasts">
               <h3>Podcast</h3>
               <p>Listen to the Weekly Tradecast episode that explore some of the main issues in the report</p>
-              <div className="iframe_container hidden">
-                <iframe title="131. UN report: Unlocking Africa’s trade potential" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=e79c8-17eacbf-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen />
-                <span className="text"><a href="/podcast/un-report-unlocking-africas-trade-potential">UN report: Unlocking Africa’s trade potential</a></span>
+              <div className="iframe_container">
+                <iframe title="139. Rethinking investment: Making money work for development" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=j86uq-18def52-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen />
+                <a href="/podcast/rethinking-investment-making-money-work-development" target="_blank">Rethinking investment: Making money work for development</a>
               </div>
             </div>
           </div>

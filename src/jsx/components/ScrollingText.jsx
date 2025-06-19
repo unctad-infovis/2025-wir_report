@@ -32,7 +32,7 @@ function ScrollingText({ chapter_text, texts }) {
         const translateX = baseOffset - scrollProgress * 450;
         let opacity = 1;
         if (translateX > 30) {
-          opacity = (1 - (translateX * 1.2 - 30) / 100);
+          opacity = (1 - (translateX * 1.1 - 30) / 100);
         } else if (translateX < 0) {
           opacity = (1 + (translateX * 1.2) / 100);
         }

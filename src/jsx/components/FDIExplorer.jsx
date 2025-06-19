@@ -132,7 +132,7 @@ const App = forwardRef((props, ref) => {
   }, [dataType, visible]);
 
   useEffect(() => {
-    const data_file = (window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2025-wir_report/assets/data/2025-fdi_explorer.json' : './assets/data/2025-fdi_explorer.json';
+    const data_file = (window.location.href.includes('unctad.org')) ? `https://storage.unctad.org/2025-wir_report/assets/data/2025-fdi_explorer.json?v=${uuid4()}` : `./assets/data/2025-fdi_explorer.json?v=${uuid4()}`;
     try {
       fetch(data_file)
         .then((response) => {

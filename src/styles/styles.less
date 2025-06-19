@@ -11,7 +11,7 @@
   >.chapters_container >.content_container,
   >.content_container {
     background-color: #fff;
-    border-bottom: 40px solid #27833A;
+    border-bottom: 40px solid #009edb;
     padding: 50px 0;
     position: relative;
     z-index: 3;
@@ -71,6 +71,7 @@
         h3 {
           font-size: 30px;
           font-weight: 800;
+          margin-bottom: 30px;
           @media all and (max-width: 576px) {
             font-size: 24px;
           }
@@ -80,8 +81,8 @@
         blockquote,
         p {
           font-size: 20px;
-          font-weight: 500;
-          line-height: 24px;
+          font-weight: 300;
+          line-height: 28px;
           margin: 0 0 20px 0;
           @media all and (max-width: 576px) {
             font-size: 18px;
@@ -184,9 +185,13 @@
           padding: 40px 0 0 100px;
           position: relative;
           .quote {
+            font-size: 22px;
+            font-style: italic;
+            line-height: 30px;
             margin-bottom: 20px;
           }
           .author {
+            font-style: normal;
             .name {
               font-weight: 600;
               display: block;
@@ -237,27 +242,56 @@
   }
   >.chapters_container >.backtotop_container {
     background-color: transparent;
-    height: 0;
-    margin-left: calc(100vw - 65px);
+    height: 45px;
     position: sticky;
+    width: 100%;
     top: calc(100vh - 65px);
-    width: 0;
     z-index: 10;
-    button {
-      background-color: #27833A;
-      border-radius: 45px;
-      border: 0;
-      color: #fff;
-      cursor: pointer;
-      font-family: Inter, Helvetica, Arial, sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      height: 45px;
+    @keyframes bounce2 {
+      0%, 100% {
+        bottom: 0;
+      }
+      5% {
+        bottom: 5px;
+      }
+      10% {
+        bottom: 10px;
+      }
+      /* rest of the time is idle */
+    }
+    div {
+      animation-delay: 10s;
+      animation-direction: normal;
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+      animation-iteration-count: 5;
+      animation-name: bounce2;
+      animation-play-state: running;
+      animation-timing-function: ease-in-out;
+      bottom: 20px;
+      margin-right: 50px;
       position: relative;
-      width: 45px;
-      &:hover {
-        background-color: #72bf44;
-        border: 1px solid #000;
+      text-align: right;
+      @media all and (max-width: 700px) {
+        margin-right: 20px;
+      }
+      button {
+        background-color: #ffcb05;
+        border-radius: 50px;
+        border: 0;
+        box-shadow: 0 0 10px #000;
+        color: #000;
+        cursor: pointer;
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        height: 50px;
+        position: relative;
+        width: 50px;
+        &:hover {
+          background-color: #27833A;
+          color: #fff;
+        }
       }
     }
   }
