@@ -8,18 +8,18 @@ function Footer() {
         <h2>What do you want to do next?</h2>
         <div className="footer_elements">
           <div className="footer_element footer_element_1">
-            <div className="footer_content anchor_videos hidden" id="anchor_videos">
+            <div className="footer_content anchor_videos" id="anchor_videos">
               <h3>Watch the videos</h3>
               <div className="iframe_container youtube_iframe">
                 <iframe
-                  src="https://player.vimeo.com/video/1072197582?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  src="https://player.vimeo.com/video/1094502450?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=584799"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  title="UNCTAD’s Technology and Innovation Report 2025"
+                  title="UNCTAD’s World Investment Report 2025 – International investment in the digital economy"
                 />
                 <script src="https://player.vimeo.com/api/player.js" />
               </div>
-              <ul>
+              <ul className="hidden">
                 <li>
                   <a href="https://vimeo.com/1071902116" target="_blank" rel="noreferrer">Français</a>
                   {', '}
@@ -52,10 +52,17 @@ function Footer() {
                   </li>
                 </ul>
               </div>
-              {/* <h4>Watch the press conference</h4>
+              <br />
+              <h4>Watch the press conference</h4>
               <div className="iframe_container youtube_iframe">
-                <iframe src="https://www.youtube.com/embed/" title="Economic Development in Africa Report press conference" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-              </div> */}
+                <iframe
+                  src="https://player.vimeo.com/video/1094731567?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  title="UNCTAD&#039;s World Investment Report 2025 – Press conference"
+                />
+                <script src="https://player.vimeo.com/api/player.js" />
+              </div>
               <div className="hidden">
                 <h4>Media assets</h4>
                 <ul className="hidden">
