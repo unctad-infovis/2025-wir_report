@@ -155,6 +155,9 @@ function App() {
             topOffset: 40
           },
           cancellable: false,
+          ease(value) {
+            return value;
+          },
           time: 1000
         });
       }, 50);
@@ -170,6 +173,9 @@ function App() {
             topOffset: 60
           },
           cancellable: false,
+          ease(value) {
+            return value;
+          },
           time: 1000
         });
       }, 50);
