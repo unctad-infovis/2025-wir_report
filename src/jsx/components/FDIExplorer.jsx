@@ -539,13 +539,13 @@ const App = forwardRef((props, ref) => {
             // Name
           }
           <div className="name_container">
-            <h3>Foreign Direct Investments</h3>
+            <h3>Foreign Direct Investments (FDI)</h3>
           </div>
           {
             // Country selection
           }
           <div className="country_selection_container">
-            <h4>Select a country or region</h4>
+            <h4>Select an economy or region</h4>
             <div className="search_container"><input type="text" placeholder="Type to search" onChange={(event) => search(event)} /></div>
             <ul className="selection_list">
               {
@@ -572,7 +572,7 @@ const App = forwardRef((props, ref) => {
             // Title
           }
           <div className="title_container">
-            <h3>By region and economy, 1990–2024</h3>
+            <h3>By region and economy, thousands of dollars, 1990–2024</h3>
             <div className="options_container">
               {
                 // <label style={{display: 'none'}}>
@@ -598,7 +598,7 @@ const App = forwardRef((props, ref) => {
             </div>
           </div>
           <div className="chart_container">
-            <div className="info" style={{ display: Object.values(selected).reduce((a, item) => a + item, 0) > 0 ? 'none' : 'flex' }}><h3>Select at least one country or region from the left</h3></div>
+            <div className="info" style={{ display: Object.values(selected).reduce((a, item) => a + item, 0) > 0 ? 'none' : 'flex' }}><h3>Select at least one economy or region from the left</h3></div>
             <div className="highchart_container" id="highchart-container" style={{ display: Object.values(selected).reduce((a, item) => a + item, 0) > 0 ? 'block' : 'none' }} />
             <div className="legend_container">
               {

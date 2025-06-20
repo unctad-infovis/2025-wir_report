@@ -28,7 +28,7 @@ function App(props) {
         <div className="download_buttons_container">
           <a href="https://unctad.org/system/files/official-document/wir2025_overview_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" aria-label="Download Overview" className="overview" rel="noreferrer">Overview</a>
           <a href="https://unctad.org/system/files/official-document/wir2025_en.pdf" target="_blank" onClick={(event) => downloadDocument(event)} type="button" aria-label="Download Full Report" className="pdf_download" rel="noreferrer">Full report</a>
-          {/* <button type="button" className="video" onClick={() => scrollTo('.anchor_videos', 'Videos')}>Video</button> */}
+          <button type="button" className="video" onClick={() => scrollTo('.anchor_videos', 'Videos')}>Video</button>
           <button type="button" className="podcast" onClick={() => scrollTo('.anchor_podcasts', 'Podcasts')}>Podcast</button>
           <button type="button" className="press" onClick={() => scrollTo('.anchor_press', 'Press')}>Press</button>
           <a href="https://unctad.org/topic/investment/world-investment-report" target="_blank" type="button" aria-label="Regional and country data" className="regional" rel="noreferrer">Regional data</a>
