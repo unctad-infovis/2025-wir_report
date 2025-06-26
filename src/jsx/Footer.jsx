@@ -19,39 +19,27 @@ function Footer() {
                 />
                 <script src="https://player.vimeo.com/api/player.js" />
               </div>
-              <ul className="hidden">
+              <ul>
                 <li>
-                  <a href="https://vimeo.com/1071902116" target="_blank" rel="noreferrer">Français</a>
+                  <a href="https://vimeo.com/1094772305" target="_blank" rel="noreferrer">Français</a>
                   {', '}
-                  <a href="https://vimeo.com/1071929637" target="_blank" rel="noreferrer">Español</a>
+                  <a href="https://vimeo.com/1095588627" target="_blank" rel="noreferrer">Español</a>
+                  {', '}
+                  <a href="https://vimeo.com/1095400709" target="_blank" rel="noreferrer">العربية</a>
+                  {', '}
+                  <a href="https://vimeo.com/1095400950" target="_blank" rel="noreferrer">简体中文</a>
+                  {', '}
+                  <a href="https://vimeo.com/1095401066" target="_blank" rel="noreferrer">Русский</a>
+                  {', '}
+                  <a href="https://vimeo.com/1095401035" target="_blank" rel="noreferrer">Português</a>
+                  {', '}
+                  <a href="https://vimeo.com/1095401091" target="_blank" rel="noreferrer">Kiswahili</a>
+                  {', '}
+                  <a href="https://vimeo.com/1095401119" target="_blank" rel="noreferrer">Urdu اردو</a>
+                  {', '}
+                  <a href="https://vimeo.com/1095401007" target="_blank" rel="noreferrer">Hindi हिंदी</a>
                 </li>
               </ul>
-              <div className="hidden">
-                <h4>Download the report video</h4>
-                <ul className="hidden">
-                  <li>
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa64e7acb906748a17eac7/download/edar-EN.mp4" target="_blank" rel="noreferrer">English</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa650992f40aed797d7c28/download/edar-FR.mp4" target="_blank" rel="noreferrer">Français</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa64f018ead7786770fd03/download/edar-ES.mp4" target="_blank" rel="noreferrer">Español</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa64c448408b267f583f05/download/edar-AR.mp4" target="_blank" rel="noreferrer">العربية</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa64ccc44aa11856f5b8de/download/edar-CH.mp4" target="_blank" rel="noreferrer">简体中文</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa652324b8dfa109a09e06/download/edar-RU.mp4" target="_blank" rel="noreferrer">Русский</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa651a313c6236558ef7c3/download/edar-PO.mp4" target="_blank" rel="noreferrer">Português</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa652da683e368e8464a3c/download/edar-SW.mp4" target="_blank" rel="noreferrer">Kiswahili</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa6536a89a4aeb05403be8/download/edar-UR.mp4" target="_blank" rel="noreferrer">Urdu اردو</a>
-                    {', '}
-                    <a href="https://trello.com/1/cards/6787838c3f19ce98f5a67697/attachments/67aa65127710537e9cc3206a/download/edar-HI.mp4" target="_blank" rel="noreferrer">Hindi हिंदी</a>
-                  </li>
-                </ul>
-              </div>
               <br />
               <h4>Watch the press conference</h4>
               <div className="iframe_container youtube_iframe">
@@ -66,9 +54,6 @@ function Footer() {
               <div className="hidden">
                 <h4>Media assets</h4>
                 <ul className="hidden">
-                  {/* <li>
-                    <a href="#download" target="_blank" rel="noreferrer">Press conference</a>
-                  </li> */}
                   <li>
                     <a href="https://www.flickr.com/photos/unctad/albums/72177720323742073/" target="_blank" rel="noreferrer">Photos</a>
                   </li>
