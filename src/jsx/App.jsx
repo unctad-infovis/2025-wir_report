@@ -197,7 +197,7 @@ function App() {
     <div className="app" ref={appRef}>
       <Header downloadDocument={downloadDocument} scrollTo={scrollTo} chapterTitles={chapterTitles} />
       { /* Overview */}
-      <div className="content_container" ref={overviewRef}>
+      <div className="content_container overview_container" ref={overviewRef}>
         <div className="text_container">
           <div className="text_content">
             <h3>Global foreign direct investment (FDI) fell by 11% to $1.5 trillion in 2024, marking the second straight year of decline.</h3>
@@ -225,9 +225,7 @@ function App() {
           </div>
         </div>
         <div className="backtotop_container">
-          <div>
-            <button type="button" onClick={() => scrollTo('.header_container', 'Top')}>Back to top</button>
-          </div>
+          <button type="button" onClick={() => scrollTo('.header_container', 'Top')}>Back to top</button>
         </div>
         <ScrollingText texts={['Where is foreign investment going?', 'Which regions and sectors are being left behind?']} chapter_text="Chapter 1" />
         <div className="content_container chapter_header_1" ref={chapter1Ref}>

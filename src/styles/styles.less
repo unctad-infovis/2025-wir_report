@@ -15,6 +15,9 @@
     padding: 50px 0;
     position: relative;
     z-index: 3;
+    &.overview_container {
+      z-index: 20;
+    }
     .recommendations,
     .content {
       background-color: #fff;
@@ -240,58 +243,40 @@
       }
     }
   }
-  >.chapters_container >.backtotop_container {
-    background-color: transparent;
-    height: 45px;
+  .chapters_container > .backtotop_container {
+    animation-delay: 10s;
+    animation-direction: normal;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 5;
+    animation-name: bounce2;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
     position: sticky;
     width: 100%;
+    text-align: right;
     top: calc(100vh - 65px);
-    z-index: 10;
-    @keyframes bounce2 {
-      0%, 100% {
-        bottom: 0;
-      }
-      5% {
-        bottom: 5px;
-      }
-      10% {
-        bottom: 10px;
-      }
-      /* rest of the time is idle */
-    }
-    div {
-      animation-delay: 10s;
-      animation-direction: normal;
-      animation-duration: 0.5s;
-      animation-fill-mode: both;
-      animation-iteration-count: 5;
-      animation-name: bounce2;
-      animation-play-state: running;
-      animation-timing-function: ease-in-out;
-      bottom: 20px;
+    z-index: 15;
+    button {
+      background-color: #ffcb05;
+      border-radius: 50px;
+      border: 0;
+      box-shadow: 0 0 10px #000;
+      color: #000;
+      cursor: pointer;
+      font-family: Inter, Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      height: 50px;
       margin-right: 50px;
       position: relative;
-      text-align: right;
+      width: 50px;
       @media all and (max-width: 1000px) {
         margin-right: 20px;
       }
-      button {
-        background-color: #ffcb05;
-        border-radius: 50px;
-        border: 0;
-        box-shadow: 0 0 10px #000;
-        color: #000;
-        cursor: pointer;
-        font-family: Inter, Helvetica, Arial, sans-serif;
-        font-size: 10px;
-        font-weight: 600;
-        height: 50px;
-        position: relative;
-        width: 50px;
-        &:hover {
-          background-color: #27833A;
-          color: #fff;
-        }
+      &:hover {
+        background-color: #009edb;
+        color: #fff;
       }
     }
   }
@@ -373,9 +358,6 @@
     position: relative;
     z-index: 4;
     .fixed-background {
-      background-attachment: fixed;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
       height: 100vh;
       left: 0;
       position: absolute;
@@ -430,11 +412,11 @@
         top: 0;
       }
       &.fixed {
-        position: fixed;
+        position: sticky;
         top: 0;
       }
       .chart_container_full {
-        align-content:center;
+        align-content: center;
         align-items: center;
         background-color: #222;
         display: flex;
