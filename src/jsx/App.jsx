@@ -225,7 +225,9 @@ function App() {
           </div>
         </div>
         <div className="backtotop_container">
-          <button type="button" onClick={() => scrollTo('.header_container', 'Top')}>Back to top</button>
+          <div>
+            <button type="button" onClick={() => scrollTo('.header_container', 'Top')}>Back to top</button>
+          </div>
         </div>
         <ScrollingText texts={['Where is foreign investment going?', 'Which regions and sectors are being left behind?']} chapter_text="Chapter 1" />
         <div className="content_container chapter_header_1" ref={chapter1Ref}>

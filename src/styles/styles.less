@@ -241,39 +241,43 @@
     }
   }
   .chapters_container > .backtotop_container {
-    animation-delay: 10s;
-    animation-direction: normal;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    animation-iteration-count: 5;
-    animation-name: bounce2;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    position: sticky;
+    background-color: transparent;
+    height: 45px;
     width: 100%;
-    text-align: right;
-    top: calc(100dvh - 65px);
-    z-index: 15;
-    button {
-      background-color: #ffcb05;
-      border-radius: 50px;
-      border: 0;
-      box-shadow: 0 0 10px #000;
-      color: #000;
-      cursor: pointer;
-      font-family: Inter, Helvetica, Arial, sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      height: 50px;
-      margin-right: 50px;
-      position: relative;
-      width: 50px;
+    div {
+      animation-delay: 10s;
+      animation-direction: normal;
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+      animation-iteration-count: 5;
+      animation-name: bounce2;
+      animation-play-state: running;
+      animation-timing-function: ease-in-out;
+      bottom: 20px;
+      position: fixed;
+      right: 50px;
+      text-align: right;
+      z-index: 15;
       @media all and (max-width: 1000px) {
-        margin-right: 20px;
+        right: 20px;
       }
-      &:hover {
-        background-color: #009edb;
-        color: #fff;
+      button {
+        background-color: #ffcb05;
+        border-radius: 50px;
+        border: 0;
+        box-shadow: 0 0 10px #000;
+        color: #000;
+        cursor: pointer;
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        height: 50px;
+        width: 50px;
+        position: relative;
+        &:hover {
+          background-color: #009edb;
+          color: #fff;
+        }
       }
     }
   }
