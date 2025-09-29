@@ -197,7 +197,7 @@ function App() {
     <div className="app" ref={appRef}>
       <Header downloadDocument={downloadDocument} scrollTo={scrollTo} chapterTitles={chapterTitles} />
       { /* Overview */}
-      <div className="content_container overview_container" ref={overviewRef}>
+      <div className="content_container" ref={overviewRef}>
         <div className="text_container">
           <div className="text_content">
             <h3>Global foreign direct investment (FDI) fell by 11% to $1.5 trillion in 2024, marking the second straight year of decline.</h3>

@@ -15,9 +15,6 @@
     padding: 50px 0;
     position: relative;
     z-index: 3;
-    &.overview_container {
-      z-index: 20;
-    }
     .recommendations,
     .content {
       background-color: #fff;
@@ -255,7 +252,7 @@
     position: sticky;
     width: 100%;
     text-align: right;
-    top: calc(100vh - 65px);
+    top: calc(100dvh - 65px);
     z-index: 15;
     button {
       background-color: #ffcb05;
@@ -335,7 +332,7 @@
       z-index: 2;
     }
     .scrolling-text {
-      height: 100vh;
+      height: 100dvh;
       position: fixed;
       top: 35vh;
       min-width: 80vw;
@@ -358,7 +355,7 @@
     position: relative;
     z-index: 4;
     .fixed-background {
-      height: 100vh;
+      height: 100dvh;
       left: 0;
       position: absolute;
       width: 100%;
@@ -366,7 +363,7 @@
       .overlay {
         background-color: rgba(0, 0, 0, 0.8);
         content: '';
-        height: 100vh;
+        height: 100dvh;
         left: 0;
         position: absolute;
         top: 0;
@@ -380,7 +377,7 @@
         left: 50%;
         position: relative;
         text-align: center;
-        top: calc(100vh - 25px);
+        top: calc(100dvh - 25px);
         width: 0;
         z-index: 10;
         .arrow {
@@ -423,7 +420,7 @@
         flex-wrap: wrap;
         justify-content: center;
         max-width: 100%;
-        min-height: 100vh;
+        min-height: 100dvh;
         width: 100%;
         div {
           width: 100%;
