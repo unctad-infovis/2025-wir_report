@@ -241,26 +241,36 @@
     }
   }
   .chapters_container > .backtotop_container {
+    animation-delay: 10s;
+    animation-direction: normal;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 5;
+    animation-name: bounce2;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
     background-color: transparent;
-    height: 45px;
-    width: 100%;
-    div {
-      animation-delay: 10s;
-      animation-direction: normal;
-      animation-duration: 0.5s;
-      animation-fill-mode: both;
-      animation-iteration-count: 5;
-      animation-name: bounce2;
-      animation-play-state: running;
-      animation-timing-function: ease-in-out;
-      bottom: 20px;
-      position: fixed;
-      right: 50px;
-      text-align: right;
-      z-index: 15;
-      @media all and (max-width: 1000px) {
-        right: 20px;
+    margin-right: 50px;
+    position: sticky;
+    top: calc(100dvh - 65px);
+    z-index: 15;
+    @keyframes bounce2 {
+      0%, 100% {
+        top: calc(100dvh - 65px);
       }
+      5% {
+        top: calc(100dvh - 70px);
+      }
+      10% {
+        top: calc(100dvh - 75px);
+      }
+      /* rest of the time is idle */
+    }
+    @media all and (max-width: 1000px) {
+      right: 20px;
+    }
+    div {
+      text-align: right;
       button {
         background-color: #ffcb05;
         border-radius: 50px;
@@ -413,7 +423,7 @@
         top: 0;
       }
       &.fixed {
-        position: sticky;
+        position: fixed;
         top: 0;
       }
       .chart_container_full {
