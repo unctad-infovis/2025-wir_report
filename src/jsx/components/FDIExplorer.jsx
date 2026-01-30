@@ -42,7 +42,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => {
 };
 
 // https://stackoverflow.com/questions/63518108/highcharts-negative-logarithmic-scale-solution-stopped-working
-// eslint-disable-next-line no-unused-expressions
+// eslint-disable-next-line
 ((H) => {
   H.addEvent(H.Axis, 'afterInit', () => {
     const { logarithmic } = this;
@@ -292,11 +292,11 @@ const App = forwardRef((props, ref) => {
         borderWidth: 1,
         crosshairs: true,
         formatter() {
-          // eslint-disable-next-line react/no-this-in-sfc
+          // eslint-disable-next-line
           const values = this.points.map(point => [point.series.name, point.y, point.color]).sort((a, b) => (a[1] < b[1] ? 1 : -1));
           const rows = [];
           rows.push(values.map(point => `<div style="color: ${point[2]}"><span class="tooltip_label">${point[0]}:</span> <span class="tooltip_value">${formatNr(roundNr(point[1], 0), ' ', '', '')}</span></div>`).join(''));
-          // eslint-disable-next-line react/no-this-in-sfc
+          // eslint-disable-next-line
           return `<div class="tooltip_container"><h3 class="tooltip_header">Year ${this.x}</h3>${rows}</div>`;
         },
         shadow: false,
