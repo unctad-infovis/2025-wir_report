@@ -196,6 +196,9 @@ function App() {
   return (
     <div className="app" ref={appRef}>
       <Header downloadDocument={downloadDocument} scrollTo={scrollTo} chapterTitles={chapterTitles} />
+      <div className="next_edition_container">
+        <a href="https://unctad.org/wir2026" target="_blank" onClick={(event) => downloadDocument(event)} rel="noreferrer">See the World Investment Report 2026</a>
+      </div>
       { /* Overview */}
       <div className="content_container" ref={overviewRef}>
         <div className="text_container">
